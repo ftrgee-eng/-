@@ -1,0 +1,72 @@
+// عدّل العقارات من هنا فقط.
+// غيّر الصور أو السعر أو المدينة أو رابط الخريطة أو رقم الواتساب حسب حاجتك.
+const PROPERTIES = [
+  {
+    id: 1,
+    title: "فيلا عائلية حديثة",
+    type: "فيلا",
+    purpose: "بيع",
+    city: "الرياض",
+    district: "النرجس",
+    price: 1850000,
+    area: 420,
+    rooms: 6,
+    baths: 5,
+    image: "assets/img/property-1.svg",
+    featured: true,
+    mapUrl: "https://maps.google.com/?q=Riyadh",
+    whatsapp: "966500000000",
+    description: "فيلا عصرية بتصميم مميز، موقع هادئ، قريبة من الخدمات والمدارس، مناسبة للعائلات."
+  },
+  {
+    id: 2,
+    title: "شقة فاخرة قريبة من الخدمات",
+    type: "شقة",
+    purpose: "إيجار",
+    city: "جدة",
+    district: "الروضة",
+    price: 52000,
+    area: 145,
+    rooms: 4,
+    baths: 3,
+    image: "assets/img/property-2.svg",
+    featured: false,
+    mapUrl: "https://maps.google.com/?q=Jeddah",
+    whatsapp: "966500000000",
+    description: "شقة واسعة بتشطيب ممتاز، مدخل ذكي، موقف سيارة، وموقع قريب من المراكز التجارية."
+  },
+  {
+    id: 3,
+    title: "أرض سكنية على شارع واسع",
+    type: "أرض",
+    purpose: "بيع",
+    city: "الدمام",
+    district: "الشاطئ",
+    price: 980000,
+    area: 600,
+    rooms: 0,
+    baths: 0,
+    image: "assets/img/property-3.svg",
+    featured: true,
+    mapUrl: "https://maps.google.com/?q=Dammam",
+    whatsapp: "966500000000",
+    description: "أرض سكنية ممتازة للاستثمار أو البناء، واجهة مناسبة وموقع قريب من الطرق الرئيسية."
+  },
+  {
+    id: 4,
+    title: "مكتب تجاري جاهز",
+    type: "مكتب",
+    purpose: "إيجار",
+    city: "الرياض",
+    district: "العليا",
+    price: 78000,
+    area: 110,
+    rooms: 3,
+    baths: 2,
+    image: "assets/img/property-4.svg",
+    featured: false,
+    mapUrl: "https://maps.google.com/?q=Olaya Riyadh",
+    whatsapp: "966500000000",
+    description: "مكتب مجهز في موقع تجاري نشط، مناسب للشركات الناشئة والمكاتب الإدارية."
+  }
+];

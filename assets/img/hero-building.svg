@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Modern building illustration">
+  <rect width="900" height="700" rx="44" fill="#efe6d7"/>
+  <circle cx="720" cy="130" r="80" fill="#c49a4a" opacity=".35"/>
+  <path d="M120 590h660" stroke="#0f5f4a" stroke-width="18" stroke-linecap="round" opacity=".25"/>
+  <rect x="185" y="190" width="210" height="380" rx="22" fill="#0f5f4a"/>
+  <rect x="430" y="120" width="285" height="450" rx="26" fill="#ffffff"/>
+  <rect x="470" y="170" width="70" height="70" rx="14" fill="#efe6d7"/>
+  <rect x="575" y="170" width="70" height="70" rx="14" fill="#efe6d7"/>
+  <rect x="470" y="270" width="70" height="70" rx="14" fill="#efe6d7"/>
+  <rect x="575" y="270" width="70" height="70" rx="14" fill="#efe6d7"/>
+  <rect x="470" y="370" width="70" height="70" rx="14" fill="#efe6d7"/>
+  <rect x="575" y="370" width="70" height="70" rx="14" fill="#efe6d7"/>
+  <rect x="245" y="245" width="52" height="52" rx="10" fill="#ffffff" opacity=".9"/>
+  <rect x="245" y="325" width="52" height="52" rx="10" fill="#ffffff" opacity=".9"/>
+  <rect x="245" y="405" width="52" height="52" rx="10" fill="#ffffff" opacity=".9"/>
+  <rect x="540" y="480" width="70" height="90" rx="16" fill="#0f5f4a"/>
+</svg>

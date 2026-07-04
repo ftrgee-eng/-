@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="منصة تسويق عقاري لعرض الشقق والفلل والأراضي للبيع والإيجار." />
+  <title>دار لينك | تسويق عقاري</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <span class="brand-mark">د</span>
+        <span>دار لينك</span>
+      </a>
+      <button class="menu-toggle" aria-label="فتح القائمة">☰</button>
+      <div class="nav-links">
+        <a href="#properties">العقارات</a>
+        <a href="#services">الخدمات</a>
+        <a href="#about">من نحن</a>
+        <a class="btn btn-small" href="https://wa.me/966500000000" target="_blank" rel="noreferrer">واتساب</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">موقع تسويق عقاري جاهز للنشر على GitHub Pages</p>
+          <h1>سوّق عقاراتك بشكل احترافي وسهل.</h1>
+          <p class="hero-text">اعرض الشقق، الفلل، الأراضي والمكاتب مع صور، سعر، موقع، فلترة، وتواصل مباشر عبر واتساب.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#properties">تصفح العقارات</a>
+            <a class="btn btn-outline" href="#contact">اطلب معاينة</a>
+          </div>
+          <div class="stats">
+            <div><strong>+120</strong><span>عقار معروض</span></div>
+            <div><strong>24/7</strong><span>تواصل مباشر</span></div>
+            <div><strong>3</strong><span>مدن رئيسية</span></div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/img/hero-building.svg" alt="واجهة عقارية حديثة" />
+          <div class="floating-card">
+            <strong>فيلا حديثة</strong>
+            <span>الرياض - حي النرجس</span>
+            <b>1,850,000 ريال</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-panel container" aria-label="بحث العقارات">
+      <div class="filter-grid">
+        <label>
+          المدينة
+          <select id="cityFilter">
+            <option value="all">كل المدن</option>
+          </select>
+        </label>
+        <label>
+          النوع
+          <select id="typeFilter">
+            <option value="all">كل الأنواع</option>
+          </select>
+        </label>
+        <label>
+          العملية
+          <select id="purposeFilter">
+            <option value="all">بيع وإيجار</option>
+            <option value="بيع">بيع</option>
+            <option value="إيجار">إيجار</option>
+          </select>
+        </label>
+        <label>
+          الحد الأعلى للسعر
+          <input id="priceFilter" type="number" placeholder="مثال: 1000000" />
+        </label>
+      </div>
+    </section>
+
+    <section id="properties" class="section container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">العقارات المتاحة</p>
+          <h2>اختر العقار المناسب</h2>
+        </div>
+        <span id="resultCount" class="pill"></span>
+      </div>
+      <div id="propertiesGrid" class="properties-grid"></div>
+    </section>
+
+    <section id="services" class="section section-soft">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">خدماتنا</p>
+          <h2>كل ما تحتاجه لتسويق عقارك</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span>📸</span>
+            <h3>عرض احترافي</h3>
+            <p>صور واضحة، تفاصيل كاملة، ومعلومات تساعد العميل على اتخاذ القرار.</p>
+          </article>
+          <article class="service-card">
+            <span>📍</span>
+            <h3>موقع وخريطة</h3>
+            <p>إظهار المدينة والحي مع رابط خرائط لتسهيل الوصول للعقار.</p>
+          </article>
+          <article class="service-card">
+            <span>💬</span>
+            <h3>تواصل سريع</h3>
+            <p>أزرار اتصال وواتساب مباشرة مع مالك العقار أو المسوّق.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container split-section">
+      <div>
+        <p class="eyebrow">من نحن</p>
+        <h2>نساعد المكاتب والأفراد على الوصول لعملاء أكثر.</h2>
+      </div>
+      <p>هذا القالب مناسب كمشروع بداية لموقع تسويق عقاري. يمكنك تعديل الاسم، الألوان، العقارات، أرقام التواصل، وإضافة دومين خاص لاحقاً.</p>
+    </section>
+
+    <section id="contact" class="section container contact-box">
+      <div>
+        <p class="eyebrow">تواصل معنا</p>
+        <h2>هل تريد معاينة عقار؟</h2>
+        <p>اضغط على الزر وسيتم فتح واتساب برسالة جاهزة.</p>
+      </div>
+      <a class="btn" href="https://wa.me/966500000000?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20عقار" target="_blank" rel="noreferrer">تواصل عبر واتساب</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> دار لينك. جميع الحقوق محفوظة.</p>
+      <div>
+        <a href="#properties">العقارات</a>
+        <a href="#contact">تواصل</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
