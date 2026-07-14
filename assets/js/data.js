@@ -451,3 +451,6 @@ const PROPERTIES = [
     whatsapp: "966566081499"
   }
 ];
+PROPERTIES.forEach(property => {
+  property.image = "assets/img/property-1.svg";
+});
