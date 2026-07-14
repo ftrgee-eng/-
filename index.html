@@ -1,152 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content=" تسويق عقاري لعرض الشقق والفلل والأراضي للبيع والإيجار." />
-  <title>دار لينك | تسويق عقاري</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عروض نواف العقارية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Tajawal', sans-serif; background: #f5f5f3; color: #1a1a1a; min-height: 100vh; }
+.wrapper { max-width: 780px; margin: 0 auto; padding: 16px; }
+
+.header { background: #fff; border-radius: 16px; padding: 20px; margin-bottom: 12px; border: 1px solid #e8e8e4; }
+.name-row { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.avatar { width: 48px; height: 48px; border-radius: 50%; background: #E1F5EE; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; color: #0F6E56; flex-shrink: 0; }
+.name { font-size: 18px; font-weight: 700; color: #1a1a1a; }
+.license { font-size: 12px; color: #888; margin-top: 2px; }
+.tagline { font-size: 13px; color: #666; margin-top: 8px; line-height: 1.6; }
+.whatsapp-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: #25D366; color: #fff; border: none; border-radius: 10px; padding: 12px 20px; font-size: 14px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 14px; text-decoration: none; font-family: 'Tajawal', sans-serif; }
+.whatsapp-btn svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
+
+.filters { background: #fff; border-radius: 16px; padding: 16px; margin-bottom: 12px; border: 1px solid #e8e8e4; }
+.filters-title { font-size: 13px; font-weight: 500; color: #666; margin-bottom: 10px; }
+.filters-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+select { font-size: 13px; padding: 9px 12px; border-radius: 10px; border: 1px solid #e0e0da; background: #f9f9f7; color: #1a1a1a; width: 100%; font-family: 'Tajawal', sans-serif; appearance: none; cursor: pointer; }
+.budget-row { grid-column: 1/-1; display: flex; align-items: center; gap: 10px; }
+.budget-row label { font-size: 13px; color: #666; white-space: nowrap; }
+.budget-row input[type=range] { flex: 1; accent-color: #1D9E75; }
+.budget-val { font-size: 13px; font-weight: 500; color: #1a1a1a; min-width: 60px; text-align: left; }
+
+.stats { display: flex; gap: 8px; margin-bottom: 12px; }
+.stat { background: #fff; border-radius: 12px; padding: 12px; flex: 1; text-align: center; border: 1px solid #e8e8e4; }
+.stat-num { font-size: 22px; font-weight: 700; color: #1a1a1a; }
+.stat-lbl { font-size: 11px; color: #888; margin-top: 2px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.card { background: #fff; border: 1px solid #e8e8e4; border-radius: 14px; padding: 14px; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; }
+.card:hover { border-color: #1D9E75; box-shadow: 0 2px 12px rgba(29,158,117,0.08); }
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+.card-area { font-size: 22px; font-weight: 700; color: #1a1a1a; }
+.badge { font-size: 10px; padding: 3px 8px; border-radius: 99px; font-weight: 500; }
+.badge-sm { background: #E1F5EE; color: #0F6E56; }
+.badge-lg { background: #E6F1FB; color: #185FA5; }
+.badge-corner { background: #FAEEDA; color: #854F0B; }
+.badge-basement { background: #EEEDFE; color: #534AB7; }
+.card-hood { font-size: 13px; color: #666; margin-bottom: 10px; }
+.card-price { font-size: 15px; font-weight: 700; color: #1a1a1a; }
+.card-psm { font-size: 11px; color: #aaa; margin-top: 3px; }
+
+.empty { background: #fff; border-radius: 14px; padding: 40px; text-align: center; color: #aaa; font-size: 14px; grid-column: 1/-1; }
+
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #aaa; }
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar container">
-      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
-        <span class="brand-mark">د</span>
-        <span>دار لينك</span>
-      </a>
-      <button class="menu-toggle" aria-label="فتح القائمة">☰</button>
-      <div class="nav-links">
-        <a href="#properties">العقارات</a>
-        <a href="#services">الخدمات</a>
-        <a href="#about">من نحن</a>
-        <a class="btn btn-small" href="https://wa.me/966500000000" target="_blank" rel="noreferrer">واتساب</a>
-      </div>
-    </nav>
-  </header>
+<div class="wrapper">
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">موقع تسويق عقاري جاهز للنشر على GitHub Pages</p>
-          <h1>سوّق عقاراتك بشكل احترافي وسهل.</h1>
-          <p class="hero-text">اعرض الشقق، الفلل، الأراضي والمكاتب مع صور، سعر، موقع، فلترة، وتواصل مباشر عبر واتساب.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#properties">تصفح العقارات</a>
-            <a class="btn btn-outline" href="#contact">اطلب معاينة</a>
-          </div>
-          <div class="stats">
-            <div><strong>+120</strong><span>عقار معروض</span></div>
-            <div><strong>24/7</strong><span>تواصل مباشر</span></div>
-            <div><strong>3</strong><span>مدن رئيسية</span></div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <img src="assets/img/hero-building.svg" alt="واجهة عقارية حديثة" />
-          <div class="floating-card">
-            <strong>فيلا حديثة</strong>
-            <span>الرياض - حي النرجس</span>
-            <b>1,850,000 ريال</b>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="search-panel container" aria-label="بحث العقارات">
-      <div class="filter-grid">
-        <label>
-          المدينة
-          <select id="cityFilter">
-            <option value="all">كل المدن</option>
-          </select>
-        </label>
-        <label>
-          النوع
-          <select id="typeFilter">
-            <option value="all">كل الأنواع</option>
-          </select>
-        </label>
-        <label>
-          العملية
-          <select id="purposeFilter">
-            <option value="all">بيع وإيجار</option>
-            <option value="بيع">بيع</option>
-            <option value="إيجار">إيجار</option>
-          </select>
-        </label>
-        <label>
-          الحد الأعلى للسعر
-          <input id="priceFilter" type="number" placeholder="مثال: 1000000" />
-        </label>
-      </div>
-    </section>
-
-    <section id="properties" class="section container">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">العقارات المتاحة</p>
-          <h2>اختر العقار المناسب</h2>
-        </div>
-        <span id="resultCount" class="pill"></span>
-      </div>
-      <div id="propertiesGrid" class="properties-grid"></div>
-    </section>
-
-    <section id="services" class="section section-soft">
-      <div class="container">
-        <div class="section-heading centered">
-          <p class="eyebrow">خدماتنا</p>
-          <h2>كل ما تحتاجه لتسويق عقارك</h2>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <span>📸</span>
-            <h3>عرض احترافي</h3>
-            <p>صور واضحة، تفاصيل كاملة، ومعلومات تساعد العميل على اتخاذ القرار.</p>
-          </article>
-          <article class="service-card">
-            <span>📍</span>
-            <h3>موقع وخريطة</h3>
-            <p>إظهار المدينة والحي مع رابط خرائط لتسهيل الوصول للعقار.</p>
-          </article>
-          <article class="service-card">
-            <span>💬</span>
-            <h3>تواصل سريع</h3>
-            <p>أزرار اتصال وواتساب مباشرة مع مالك العقار أو المسوّق.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section container split-section">
+  <div class="header">
+    <div class="name-row">
+      <div class="avatar">ن</div>
       <div>
-        <p class="eyebrow">من نحن</p>
-        <h2>نساعد المكاتب والأفراد على الوصول لعملاء أكثر.</h2>
-      </div>
-      <p>هذا القالب مناسب كمشروع بداية لموقع تسويق عقاري. يمكنك تعديل الاسم، الألوان، العقارات، أرقام التواصل، وإضافة دومين خاص لاحقاً.</p>
-    </section>
-
-    <section id="contact" class="section container contact-box">
-      <div>
-        <p class="eyebrow">تواصل معنا</p>
-        <h2>هل تريد معاينة عقار؟</h2>
-        <p>اضغط على الزر وسيتم فتح واتساب برسالة جاهزة.</p>
-      </div>
-      <a class="btn" href="https://wa.me/966500000000?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20عقار" target="_blank" rel="noreferrer">تواصل عبر واتساب</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© <span id="year"></span> دار لينك. جميع الحقوق محفوظة.</p>
-      <div>
-        <a href="#properties">العقارات</a>
-        <a href="#contact">تواصل</a>
+        <div class="name">نواف — مسوق عقاري معتمد 🏡</div>
+        <div class="license">رخصة رقم: 1100305077</div>
       </div>
     </div>
-  </footer>
+    <div class="tagline">محفظة متنوعة من الفلل في أحياء مميزة بالرياض — استخدم الفلاتر لتجد ما يناسبك ثم تواصل معي مباشرة</div>
+    <a class="whatsapp-btn" href="https://wa.me/966569807656?text=السلام عليكم، شفت كتالوج الفلل وأبي أستفسر" target="_blank">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      تواصل معي على واتساب
+    </a>
+  </div>
 
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/main.js"></script>
+  <div class="filters">
+    <div class="filters-title">🔍 فلتر العروض</div>
+    <div class="filters-grid">
+      <select id="sel-cat">
+        <option value="">كل المساحات</option>
+        <option value="small">متوسطة (٢٠٠م - ٢٩٠م)</option>
+        <option value="large">كبيرة (٣٠٠م - ٤٩٠م)</option>
+      </select>
+      <select id="sel-hood">
+        <option value="">كل الأحياء</option>
+      </select>
+      <div class="budget-row">
+        <label>الميزانية:</label>
+        <input type="range" id="budget-range" min="3" max="15" step="0.5" value="15">
+        <span class="budget-val" id="budget-val">الكل</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num" id="count-all">0</div><div class="stat-lbl">عقار متاح</div></div>
+    <div class="stat"><div class="stat-num" id="price-min">-</div><div class="stat-lbl">أقل سعر (م.ر)</div></div>
+    <div class="stat"><div class="stat-num" id="price-max">-</div><div class="stat-lbl">أعلى سعر (م.ر)</div></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="footer">جميع الأسعار بالريال السعودي — للاستفسار تواصل مع نواف</div>
+
+</div>
+
+<script>
+const props = [
+  {hood:"الوادي",area:203,price:3.3,cat:"small",noteType:""},
+  {hood:"النفل",area:200,price:3.5,cat:"small",noteType:""},
+  {hood:"المصيف",area:200,price:3.5,cat:"small",noteType:""},
+  {hood:"المصيف",area:275,price:3.79,cat:"small",noteType:""},
+  {hood:"المرسلات",area:250,price:4.55,cat:"small",noteType:"basement"},
+  {hood:"المروج",area:260,price:4.1,cat:"small",noteType:"corner"},
+  {hood:"الملك فهد",area:200,price:3.7,cat:"small",noteType:""},
+  {hood:"الياسمين",area:200,price:3.2,cat:"small",noteType:""},
+  {hood:"الياسمين",area:230,price:3.6,cat:"small",noteType:""},
+  {hood:"الياسمين",area:235,price:3.35,cat:"small",noteType:""},
+  {hood:"المحمدية",area:230,price:4.6,cat:"small",noteType:""},
+  {hood:"المحمدية",area:260,price:5.5,cat:"small",noteType:""},
+  {hood:"المعذر",area:240,price:4.1,cat:"small",noteType:""},
+  {hood:"الصحافة",area:220,price:3.8,cat:"small",noteType:""},
+  {hood:"العليا",area:200,price:3.5,cat:"small",noteType:""},
+  {hood:"نرجس الضحيان",area:230,price:3.6,cat:"small",noteType:""},
+  {hood:"نرجس الضحيان",area:270,price:4.2,cat:"small",noteType:"corner"},
+  {hood:"النرجس ج.سلمان",area:200,price:3.3,cat:"small",noteType:""},
+  {hood:"النرجس ج.سلمان",area:207,price:3.5,cat:"small",noteType:""},
+  {hood:"النرجس ج.سلمان",area:230,price:3.7,cat:"small",noteType:""},
+  {hood:"النرجس ج.سلمان",area:242,price:3.9,cat:"small",noteType:"corner"},
+  {hood:"النرجس ج.سلمان",area:268,price:4.1,cat:"small",noteType:"corner"},
+  {hood:"صلاح الدين",area:320,price:5.2,cat:"large",noteType:"corner"},
+  {hood:"المصيف",area:300,price:4.5,cat:"large",noteType:""},
+  {hood:"الوادي",area:318,price:4.55,cat:"large",noteType:""},
+  {hood:"الملك فهد",area:350,price:4.8,cat:"large",noteType:""},
+  {hood:"المحمدية",area:300,price:6.35,cat:"large",noteType:""},
+  {hood:"المحمدية",area:340,price:5.9,cat:"large",noteType:""},
+  {hood:"المحمدية",area:375,price:5.9,cat:"large",noteType:""},
+  {hood:"المعذر",area:304,price:4.6,cat:"large",noteType:""},
+  {hood:"الملقا",area:300,price:5.5,cat:"large",noteType:""},
+  {hood:"الصحافة",area:350,price:5.5,cat:"large",noteType:""},
+  {hood:"العقيق",area:375,price:7,cat:"large",noteType:"basement"},
+  {hood:"النخيل",area:400,price:6.9,cat:"large",noteType:""},
+  {hood:"النخيل الشرقي",area:420,price:9,cat:"large",noteType:""},
+  {hood:"الورود",area:400,price:6.4,cat:"large",noteType:""},
+  {hood:"الندى",area:425,price:10.2,cat:"large",noteType:"basement"},
+  {hood:"الغدير",area:477,price:14,cat:"large",noteType:"corner"},
+  {hood:"النرجس ج.سلمان",area:300,price:5.1,cat:"large",noteType:""},
+  {hood:"النرجس ج.سلمان",area:305,price:5.5,cat:"large",noteType:"corner"},
+  {hood:"النرجس ج.سلمان",area:400,price:6.5,cat:"large",noteType:""},
+];
+
+const hoods = [...new Set(props.map(p=>p.hood))].sort();
+const sel = document.getElementById('sel-hood');
+hoods.forEach(h=>{ const o=document.createElement('option'); o.value=h; o.textContent=h; sel.appendChild(o); });
+
+const budgetRange = document.getElementById('budget-range');
+const budgetVal = document.getElementById('budget-val');
+budgetRange.addEventListener('input', ()=>{ budgetVal.textContent = parseFloat(budgetRange.value)>=15 ? 'الكل' : budgetRange.value+' م'; render(); });
+
+function getFiltered(){
+  const cat = document.getElementById('sel-cat').value;
+  const hood = document.getElementById('sel-hood').value;
+  const budget = parseFloat(budgetRange.value);
+  return props.filter(p=>{
+    if(cat && p.cat!==cat) return false;
+    if(hood && p.hood!==hood) return false;
+    if(budget<15 && p.price>budget) return false;
+    return true;
+  });
+}
+
+function render(){
+  const list = getFiltered();
+  const grid = document.getElementById('grid');
+  document.getElementById('count-all').textContent = list.length;
+  if(list.length){
+    const prices = list.map(p=>p.price);
+    document.getElementById('price-min').textContent = Math.min(...prices).toFixed(2).replace(/\.?0+$/,'');
+    document.getElementById('price-max').textContent = Math.max(...prices).toFixed(2).replace(/\.?0+$/,'');
+  } else {
+    document.getElementById('price-min').textContent='-';
+    document.getElementById('price-max').textContent='-';
+  }
+  if(!list.length){ grid.innerHTML='<div class="empty">لا توجد عقارات بهذه المواصفات</div>'; return; }
+  grid.innerHTML = list.map(p=>{
+    const psm = Math.round((p.price*1000000)/p.area).toLocaleString('ar-SA');
+    let badge='';
+    if(p.noteType==='corner') badge=`<span class="badge badge-corner">زاوية</span>`;
+    else if(p.noteType==='basement') badge=`<span class="badge badge-basement">قبو</span>`;
+    else if(p.cat==='large') badge=`<span class="badge badge-lg">كبيرة</span>`;
+    else badge=`<span class="badge badge-sm">متوسطة</span>`;
+    return `<div class="card">
+      <div class="card-top"><span class="card-area">${p.area}م²</span>${badge}</div>
+      <div class="card-hood">${p.hood}</div>
+      <div class="card-price">${p.price} مليون</div>
+      <div class="card-psm">${psm} ر.س / م²</div>
+    </div>`;
+  }).join('');
+}
+
+document.getElementById('sel-cat').addEventListener('change', render);
+document.getElementById('sel-hood').addEventListener('change', render);
+render();
+</script>
 </body>
 </html>
