@@ -449,6 +449,17 @@ const PROPERTIES = [
     price: 6500000,
     area: 400,
     whatsapp: "966566081499"
+  },
+  {
+    id: 41,
+    title: " فيلا ضمن فلل سكنية في حي النخيل بالقرب من اهم الخدمات والمرافق",
+    type: "فيلا",
+    purpose: "بيع",
+    city: "الرياض",
+    district: "االنخيل",
+    price: 4870000,
+    area: 437.51,
+    whatsapp: "966566081499"
   }
 ];
 PROPERTIES.forEach(property => {
